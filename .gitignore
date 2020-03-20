@@ -5,6 +5,7 @@
 
 # Gradle files
 build/
+public/
 .gradle/*
 */build/\*
 
