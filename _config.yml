@@ -4,13 +4,11 @@
 
 # Site
 title: '枯鱼之泣s blog'
-subtitle: 'cassi'
 description: ''
 keywords:
 author: '枯鱼之泣'
 language: en
 timezone: ''
-avatar: '/images/header.png'
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
