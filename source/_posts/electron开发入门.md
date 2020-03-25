@@ -4,7 +4,7 @@ date: 2020-03-16 10:24:42
 tags:
 ---
 
-### 准备工作
+### 一、准备工作
 1.安装node.js，[地址](https://nodejs.org/zh-cn/)
 
     1. 安装完毕后执行:node -v 查看node版本 
@@ -19,7 +19,7 @@ tags:
     
      -g：全局，没有权限的话前面加sudo
 
-### 创建项目
+### 二、创建项目
 方式一：
 ```
 1. mkdir demo
@@ -41,11 +41,36 @@ tags:
 ```
 这种方式对初学者比较友好，你只需要3步就能完成项目的创建及启动
 
-### 主进程及渲染进程
+### 三、主进程及渲染进程
 前言：electron的本质是一个chromium
-#### 1.主进程：main.js
-只有一个，
+#### 1.主进程
+    入口：main.js
+只有一个，electron将nodejs结合起来，提供了操作访问和操作本地资源的API，这些API原本是在浏览器中不存在的，比如：磁盘、文件访问等，同时它管理着渲染进程窗口的创建和销毁；
     
-#### 2.渲染进程：render.js
+#### 2.渲染进程
+    入口：render.js
+Electron本质是浏览器，它的界面是用html展示的，渲染进程是负责渲染html的，它可以有多个，比如：
+```$xslt
+//main.js
+const {BrowserWindow} = require('electron');
+const window1 = new BrowserWindow({width: 200, height: 200})
+const window2 = new BrowserWindow({width: 200, height: 200})
 
+window1.loadURL('https://baidu.com');
+window2.loadURL(`file://${__dirname}/index.html`)
+```
+这两个窗口一个加载的是外部url，一个是本地的文件，两者是相互独立的进程，如果window1出现崩溃的话，window2是不受影响的；
+
+#### 3.任务管理器的展示
+
+<img src="../images/electron_background.png" width="640px"/>
+
+Electron：主进程
+3个新的 Helper 应用程序变体
+1.Electron Helper(GPU)：用于 GPU 进程
+2.Electron Helper(Renderer).app：用于渲染器
+3.Electron Helper(Plugin).app：用于插件
+
+### 四、main.js详解
     
+### 打包
