@@ -1,3 +1,14 @@
+<img src="../images/electron_background.png" width="640px"/>
+
+Electron：主进程
+3个新的 Helper 应用程序变体
+1.Electron Helper(GPU)：用于 GPU 进程
+2.Electron Helper(Renderer).app：用于渲染器
+3.Electron Helper(Plugin).app：用于插件
+
+### 四、main.js详解
+    
+### 打包
 ---
 title: electron开发入门
 date: 2020-03-16 10:24:42
@@ -63,14 +74,3 @@ window2.loadURL(`file://${__dirname}/index.html`)
 
 #### 3.任务管理器的展示
 
-<img src="../images/electron_background.png" width="640px"/>
-
-Electron：主进程
-3个新的 Helper 应用程序变体
-1.Electron Helper(GPU)：用于 GPU 进程
-2.Electron Helper(Renderer).app：用于渲染器
-3.Electron Helper(Plugin).app：用于插件
-
-### 四、main.js详解
-    
-### 打包
