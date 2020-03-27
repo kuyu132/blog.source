@@ -1,15 +1,3 @@
-<img src="../images/electron_background.png" width="640px"/>
-
-Electron：主进程
-3个新的 Helper 应用程序变体
-1.Electron Helper(GPU)：用于 GPU 进程
-2.Electron Helper(Renderer).app：用于渲染器
-3.Electron Helper(Plugin).app：用于插件
-
-### 四、main.js详解
-    
-### 打包
----
 title: electron开发入门
 date: 2020-03-16 10:24:42
 tags:
@@ -73,4 +61,19 @@ window2.loadURL(`file://${__dirname}/index.html`)
 这两个窗口一个加载的是外部url，一个是本地的文件，两者是相互独立的进程，如果window1出现崩溃的话，window2是不受影响的；
 
 #### 3.任务管理器的展示
+<img src="/images/electron_background.png" width="640px"/>
+
+Electron：主进程
+3个新的 Helper 应用程序变体
+1.Electron Helper(GPU)：用于 GPU 进程
+2.Electron Helper(Renderer).app：用于渲染器
+3.Electron Helper(Plugin).app：用于插件
+
+### 四、main.js详解
+
+### 五、常见模块及使用
+#### 模块的安装
+#### package-lock.json文件介绍
+    
+### 六、打包
 
