@@ -12,6 +12,8 @@ childProcess = exec('adb logcat | grep "sqsdk"');
 ```
  到达了maxbuffer便不会输出
  
+ <!--more-->
+ 
  方式2：
  执行脚本文件：不支持多个平台
  
