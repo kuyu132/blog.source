@@ -12,3 +12,12 @@ ps -ef | grep nginx
 
 ### 查找文件夹
 find / name
+
+
+### 切换root用户
+sudo su
+ 
+### 查看磁盘空间大小
+df -hl
+
+### 查看文件夹大小
