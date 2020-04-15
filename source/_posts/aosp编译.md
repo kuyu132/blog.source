@@ -53,4 +53,19 @@ emulator -partition-size 2048
 出现这种错误的时候，可以根据里面的solutions，最简单的解决方案是make后面接上-j参数
 
 
+### aosp相关
 
+环境相关的配置
+build/core/envsetup.mk
+
+OUT_DIR是通过参数传进去的，其它文件的输出在OUT_DIR下面，比如soong，target，host等
+
+如果没有指定的话，OUT_DIR是当前aosp的目录下的out文件夹
+
+手动指定，它的本质上是读你当前的环境变量的配置，如果你配置了则使用你的，没有配置的话就上面所说的路径
+export OUT_DIR=your_out_dir
+注意：export OUT_DIR=
+OUT_DIR 后面直接跟= ，不要有空格。否则报错。
+
+soong构建相关的资料
+https://source.android.com/setup/build
