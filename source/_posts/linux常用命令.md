@@ -12,3 +12,6 @@ ps -ef | grep nginx
 
 ### 查找文件夹
 find / name
+
+
+### 内存相关
