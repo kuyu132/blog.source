@@ -14,4 +14,22 @@ ps -ef | grep nginx
 find / name
 
 
+<<<<<<< HEAD
 ### 内存相关
+=======
+### 切换root用户
+sudo su
+
+切回普通用户：su - test
+ 
+### 查看磁盘空间大小
+df -hl
+
+### 查看文件夹大小
+
+
+### 显示vim行数
+vim /etc/vim/vimrc
+最后面添加
+set nu
+>>>>>>> 6db5c5a47c2d7fe62285fcd611aa078bd29f7bd7
