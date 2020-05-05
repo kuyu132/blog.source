@@ -20,6 +20,8 @@ sudo nginx -s reload
 测试配置是否OK
 nginx -t
 
+<!--more-->
+
 默认配置和nginx.conf之间的区别
 /etc/nginx/sites-available/default
 /etc/nginx/nginx.conf

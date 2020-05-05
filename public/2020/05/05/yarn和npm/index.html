@@ -20,17 +20,19 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Muse","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="article">
-<meta property="og:title" content="树莓派安装android tv">
-<meta property="og:url" content="http://yoursite.com/2020/03/30/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85Android%20tv/index.html">
+  <meta name="description" content="1.优缺点对比yarn的优点？  速度快：1、并行安装，执行包安装任务队列的时候，npm是按照队列执行的，必须要等到当前的package安装完毕后，再进行后面的package安装，而yarn是同步执行的； 离线模式，如果之前已经安装过一个软件包，用Yarn再次安装时之间从缓存中获取，就不用像npm那样再从网络下载了，npm有提到但没有实现； 安装版本统一，为了防止拉取到不同的版本，Yarn 有一个">
+<meta property="og:type" content="article">
+<meta property="og:title" content="yarn和npm">
+<meta property="og:url" content="http://yoursite.com/2020/05/05/yarn%E5%92%8Cnpm/index.html">
 <meta property="og:site_name" content="枯鱼之泣&#39;s blog">
+<meta property="og:description" content="1.优缺点对比yarn的优点？  速度快：1、并行安装，执行包安装任务队列的时候，npm是按照队列执行的，必须要等到当前的package安装完毕后，再进行后面的package安装，而yarn是同步执行的； 离线模式，如果之前已经安装过一个软件包，用Yarn再次安装时之间从缓存中获取，就不用像npm那样再从网络下载了，npm有提到但没有实现； 安装版本统一，为了防止拉取到不同的版本，Yarn 有一个">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-03-30T02:32:23.000Z">
-<meta property="article:modified_time" content="2020-03-30T02:33:37.471Z">
+<meta property="article:published_time" content="2020-05-05T05:17:57.000Z">
+<meta property="article:modified_time" content="2020-05-05T09:00:57.673Z">
 <meta property="article:author" content="枯鱼之泣">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/2020/03/30/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85Android%20tv/">
+<link rel="canonical" href="http://yoursite.com/2020/05/05/yarn%E5%92%8Cnpm/">
 
 
 <script id="page-configurations">
@@ -43,7 +45,7 @@
   };
 </script>
 
-  <title>树莓派安装android tv | 枯鱼之泣's blog</title>
+  <title>yarn和npm | 枯鱼之泣's blog</title>
   
 
 
@@ -149,7 +151,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/30/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85Android%20tv/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/05/yarn%E5%92%8Cnpm/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/header.jpg">
@@ -162,7 +164,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          树莓派安装android tv
+          yarn和npm
         </h1>
 
         <div class="post-meta">
@@ -173,7 +175,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-03-30 10:32:23 / Modified: 10:33:37" itemprop="dateCreated datePublished" datetime="2020-03-30T10:32:23+08:00">2020-03-30</time>
+              <time title="Created: 2020-05-05 13:17:57 / Modified: 17:00:57" itemprop="dateCreated datePublished" datetime="2020-05-05T13:17:57+08:00">2020-05-05</time>
             </span>
 
           
@@ -187,7 +189,52 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        
+        <h3 id="1-优缺点对比"><a href="#1-优缺点对比" class="headerlink" title="1.优缺点对比"></a>1.优缺点对比</h3><p>yarn的优点？</p>
+<ol>
+<li>速度快：1、并行安装，执行包安装任务队列的时候，npm是按照队列执行的，必须要等到当前的package安装完毕后，再进行后面的package安装，而yarn是同步执行的；</li>
+<li>离线模式，如果之前已经安装过一个软件包，用Yarn再次安装时之间从缓存中获取，就不用像npm那样再从网络下载了，npm有提到但没有实现；</li>
+<li>安装版本统一，为了防止拉取到不同的版本，Yarn 有一个锁定文件 (lock file) 记录了被确切安装上的模块的版本号。每次只要新增了一个模块，Yarn 就会创建（或更新）yarn.lock 这个文件。这么做就保证了，每一次拉取同一个项目依赖时，使用的都是一样的模块版本。npm也有一个package-lock.json的文件，里面记录了依赖的版本号，但npm只是大版本号相同，比如：8.0.33，但在实际安装的时候可能安装的是高于8.0.33版本的，比如：8.0.35，如果开发者没有遵守大版本差异的话就可能出现不兼容的情况；</li>
+<li>输出日志更加简洁，在使用npm安装package的时候，terminal的日志输出很乱，命令行里会不断地打印出所有被安装上的依赖，而yarn只显示了必要的信息；</li>
+<li>网络适应：单个请求失败不会导致安装失败，请求失败时会重试。(在安装的过程中切换到vpn就很实用了)；</li>
+<li>yarn依赖结构是扁平化的，npm2之前是树形的，npm3以上是扁平化的（这对于基于Unix的操作系统来说只不过是一个小烦恼，但对于Windows来说却是个破坏性的东西，因为有很多程序无法处理超过260个字符的文件路径名），防止出现多个副本导致空间浪费；</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">树形结构：</span><br><span class="line">node_modules</span><br><span class="line">- package-A</span><br><span class="line">-- node_modules</span><br><span class="line">--- package-B</span><br><span class="line">----- node_modules</span><br><span class="line">------ package-C</span><br><span class="line">-------- some-really-really-really-long-file-name-in-package-c.js</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-命令对比"><a href="#2-命令对比" class="headerlink" title="2.命令对比"></a>2.命令对比</h3><table>
+<thead>
+<tr>
+<th>npm</th>
+<th>yarn</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>npm install</td>
+<td>yarn</td>
+</tr>
+<tr>
+<td>npm install react –save</td>
+<td>yarn add react</td>
+</tr>
+<tr>
+<td>npm uninstall react –save</td>
+<td>yarn remove react</td>
+</tr>
+<tr>
+<td>npm install react –save-dev</td>
+<td>yarn add react –dev</td>
+</tr>
+<tr>
+<td>npm update –save</td>
+<td>yarn upgrade</td>
+</tr>
+<tr>
+<td>npm install webpack webpack-cli webpack-dev-server</td>
+<td>yarn add webpack webpack-cli webpack-dev-server</td>
+</tr>
+</tbody></table>
+<p>初始化的时候：npm install/yarn<br>–save 安装到项目的dependencies下<br>–save-dev 安装到项目的devDependencies下</p>
+<h3 id="3-其它"><a href="#3-其它" class="headerlink" title="3.其它"></a>3.其它</h3><p>cnpm（<a href="https://developer.aliyun.com/mirror/NPM" target="_blank" rel="noopener">链接</a>）：只是npm使用了淘宝镜像后的别名</p>
+
     </div>
 
     
@@ -202,13 +249,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/03/30/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85openWrt/" rel="prev" title="树莓派安装openWrt">
-      <i class="fa fa-chevron-left"></i> 树莓派安装openWrt
+    <a href="/2020/05/04/vue3-0/" rel="prev" title="vue3.0">
+      <i class="fa fa-chevron-left"></i> vue3.0
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/03/31/%E5%BC%80%E5%8F%91%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/" rel="next" title="开发中遇到的问题">
-      开发中遇到的问题 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -268,6 +312,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-优缺点对比"><span class="nav-number">1.</span> <span class="nav-text">1.优缺点对比</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-命令对比"><span class="nav-number">2.</span> <span class="nav-text">2.命令对比</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-其它"><span class="nav-number">3.</span> <span class="nav-text">3.其它</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

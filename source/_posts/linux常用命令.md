@@ -13,10 +13,11 @@ ps -ef | grep nginx
 ### 查找文件夹
 find / name
 
+<!--more-->
 
-<<<<<<< HEAD
 ### 内存相关
-=======
+
+
 ### 切换root用户
 sudo su
 
@@ -32,4 +33,4 @@ df -hl
 vim /etc/vim/vimrc
 最后面添加
 set nu
->>>>>>> 6db5c5a47c2d7fe62285fcd611aa078bd29f7bd7
+
