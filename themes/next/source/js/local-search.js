@@ -207,7 +207,7 @@ window.addEventListener('DOMContentLoaded', () => {
   };
 
   const fetchData = () => {
-    fetch(CONFIG.root + searchPath)
+    fetch(CONFIG.ph + searchPath)
       .then(response => response.text())
       .then(res => {
         // Get the contents from search data

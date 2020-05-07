@@ -46,7 +46,7 @@ window.addEventListener('DOMContentLoaded', () => {
             .replace(/\$\{time}/, data.processingTimeMS);
           return `${stats}
             <span class="algolia-powered">
-              <img src="${CONFIG.root}images/algolia_logo.svg" alt="Algolia">
+              <img src="${CONFIG.ph}images/algolia_logo.svg" alt="Algolia">
             </span>
             <hr>`;
         }
@@ -57,7 +57,7 @@ window.addEventListener('DOMContentLoaded', () => {
       container: '#algolia-hits',
       templates: {
         item: data => {
-          let link = data.permalink ? data.permalink : CONFIG.root + data.path;
+          let link = data.permalink ? data.permalink : CONFIG.ph + data.path;
           return `<a href="${link}" class="algolia-hit-item-link">${data._highlightResult.title.value}</a>`;
         },
         empty: data => {
