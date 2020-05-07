@@ -28,7 +28,7 @@
 <meta property="og:description" content="安装cpu的pytorch，使用官网的安装方式，import的时候一直报”no module named torch” 推荐使用下面的方式安装并创建deeplearning环境(名称可以自己定义) 123conda create -n deeplearning pytorch torchvision -c pytorchconda activate deeplearningconda deacti">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-05-05T14:38:41.000Z">
-<meta property="article:modified_time" content="2020-05-05T09:42:09.411Z">
+<meta property="article:modified_time" content="2020-05-07T01:45:29.485Z">
 <meta property="article:author" content="枯鱼之泣">
 <meta name="twitter:card" content="summary">
 
@@ -173,10 +173,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2020-05-05 22:38:41 / Modified: 17:42:09" itemprop="dateCreated datePublished" datetime="2020-05-05T22:38:41+08:00">2020-05-05</time>
+              <time title="Created: 2020-05-05 22:38:41" itemprop="dateCreated datePublished" datetime="2020-05-05T22:38:41+08:00">2020-05-05</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-05-07 09:45:29" itemprop="dateModified" datetime="2020-05-07T09:45:29+08:00">2020-05-07</time>
+              </span>
 
           
 
@@ -192,6 +198,13 @@
         <p>安装cpu的pytorch，使用官网的安装方式，import的时候一直报”no module named torch”</p>
 <p>推荐使用下面的方式安装并创建deeplearning环境(名称可以自己定义)</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">conda create -n deeplearning pytorch torchvision -c pytorch</span><br><span class="line">conda activate deeplearning</span><br><span class="line">conda deactivate</span><br></pre></td></tr></table></figure>
+<p>如果安装的时候没有指定环境的话，可以通过conda info –envs命令查看默认创建的，比如：base</p>
+<a style="color:red;">
+注意：要在conda activate的深度学习环境的终端里面启动jupyter book，不然在引入的时候可能会出现no module named torch
+</a>
+
+<h3 id="jupter-notebook"><a href="#jupter-notebook" class="headerlink" title="jupter notebook"></a>jupter notebook</h3><p>安装：官网：<a href="https://jupyter.org/install.html" target="_blank" rel="noopener">https://jupyter.org/install.html</a></p>
+<p>启动：<a href="https://blog.csdn.net/cruise_h/article/details/60337437" target="_blank" rel="noopener">https://blog.csdn.net/cruise_h/article/details/60337437</a></p>
 
     </div>
 
@@ -273,6 +286,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#jupter-notebook"><span class="nav-number">1.</span> <span class="nav-text">jupter notebook</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

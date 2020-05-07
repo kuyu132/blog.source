@@ -27,12 +27,14 @@
 <meta property="og:site_name" content="枯鱼之泣&#39;s blog">
 <meta property="og:description" content="fastboot flash boot twrp-3.2.3-0-mata.img &amp;&amp; fastboot reboot adb reboot bootloader .&#x2F;fastboot –set-active&#x3D;b .&#x2F;fastboot flash boot_a recovery.img &#x2F;&#x2F;查看当前激活分区.&#x2F;fastboot getvar current-slot .&#x2F;fast">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/images/ph-1.png">
 <meta property="article:published_time" content="2020-05-06T07:02:46.000Z">
-<meta property="article:modified_time" content="2020-05-06T09:43:11.135Z">
+<meta property="article:modified_time" content="2020-05-07T04:20:41.963Z">
 <meta property="article:author" content="枯鱼之泣">
 <meta property="article:tag" content="root">
 <meta property="article:tag" content="essential phone">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/images/ph-1.png">
 
 <link rel="canonical" href="http://yoursite.com/2020/05/06/AndroidRoot%E6%95%99%E7%A8%8B/">
 
@@ -175,10 +177,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2020-05-06 15:02:46 / Modified: 17:43:11" itemprop="dateCreated datePublished" datetime="2020-05-06T15:02:46+08:00">2020-05-06</time>
+              <time title="Created: 2020-05-06 15:02:46" itemprop="dateCreated datePublished" datetime="2020-05-06T15:02:46+08:00">2020-05-06</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-05-07 12:20:41" itemprop="dateModified" datetime="2020-05-07T12:20:41+08:00">2020-05-07</time>
+              </span>
 
           
 
@@ -202,6 +210,27 @@
 <p><a href="https://zhuanlan.zhihu.com/p/58507641" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/58507641</a></p>
 <p>官网地址：<a href="https://www.essential.com/developer/current-builds" target="_blank" rel="noopener">https://www.essential.com/developer/current-builds</a></p>
 <p>常用刷机命令：<a href="https://ghost.atibm.com/adb-an-zhuo-shua-ji-chang-yong-de-adbhe-fastbootming-ling/" target="_blank" rel="noopener">https://ghost.atibm.com/adb-an-zhuo-shua-ji-chang-yong-de-adbhe-fastbootming-ling/</a></p>
+<h3 id="刷机文件详解"><a href="#刷机文件详解" class="headerlink" title="刷机文件详解"></a>刷机文件详解</h3><img src="/images/ph-1.png" width="640px">
+
+<p>abl.img<br>好像是高通平台的文件</p>
+<p>bluetooth.img<br>蓝牙驱动文件</p>
+<p>boot.img</p>
+<p>boot.img是Android系统启动所必须加载的文件。简单的说，boot.img包含两部分，分别为kernel 和ramdisk。</p>
+<p>当你的Android手机启动时首先会启动RADIO，然后是SPL。<br>此时SPL 会根据你的按键，确定进入哪个模式（ 例如Recovery，Fastboot等等），<br>如果没有按其他键，那么spl 会将kernel 载入到记忆体中，ramdisk 也会载入到你的设备的根目录。</p>
+<p>cmnlib.mbn</p>
+<p>百度百科：</p>
+<p>mbn是高通包含了特定运营商定制的一套efs，nv的集成包文件。同样的mbn文件会有很多。每个运营商都会有一个特定mbn包含在modem的代码中。需要使用高通最新的PDC工具load和激活（PDC工具之前为QPST software download的子功能，现在作为一个单独的app包含在QPST中）。然后才能切换。<br>mbn文件是刷高通ril芯片的文件，需要用高通的QPST软件烧录。<br>mbn直接是个文件，不需要解压，把QPST切换到software download—Multi-image，这个sheet就可以识别mbn文件烧录。</p>
+<p>flashall.sh/flashall.bat</p>
+<p>刷机的脚本</p>
+<p>modem.img</p>
+<p>基带相关，射频相关的参数</p>
+<p>nvdef.img</p>
+<p>system.img</p>
+<p>真正的系统</p>
+<p>vendor.img</p>
+<p>vendor分区相关，带有品牌标识和驱动</p>
+<p>xbl.img</p>
+<p>xbl分区相关</p>
 
     </div>
 
@@ -284,7 +313,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#"><span class="nav-number">1.</span> <span class="nav-text"></span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#"><span class="nav-number">1.</span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#刷机文件详解"><span class="nav-number">2.</span> <span class="nav-text">刷机文件详解</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

@@ -170,10 +170,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2020-05-06 15:02:46 / Modified: 17:43:11" itemprop="dateCreated datePublished" datetime="2020-05-06T15:02:46+08:00">2020-05-06</time>
+              <time title="Created: 2020-05-06 15:02:46" itemprop="dateCreated datePublished" datetime="2020-05-06T15:02:46+08:00">2020-05-06</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-05-07 12:20:41" itemprop="dateModified" datetime="2020-05-07T12:20:41+08:00">2020-05-07</time>
+              </span>
 
           
 
@@ -197,6 +203,27 @@
 <p><a href="https://zhuanlan.zhihu.com/p/58507641" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/58507641</a></p>
 <p>官网地址：<a href="https://www.essential.com/developer/current-builds" target="_blank" rel="noopener">https://www.essential.com/developer/current-builds</a></p>
 <p>常用刷机命令：<a href="https://ghost.atibm.com/adb-an-zhuo-shua-ji-chang-yong-de-adbhe-fastbootming-ling/" target="_blank" rel="noopener">https://ghost.atibm.com/adb-an-zhuo-shua-ji-chang-yong-de-adbhe-fastbootming-ling/</a></p>
+<h3 id="刷机文件详解"><a href="#刷机文件详解" class="headerlink" title="刷机文件详解"></a>刷机文件详解</h3><img src="/images/ph-1.png" width="640px">
+
+<p>abl.img<br>好像是高通平台的文件</p>
+<p>bluetooth.img<br>蓝牙驱动文件</p>
+<p>boot.img</p>
+<p>boot.img是Android系统启动所必须加载的文件。简单的说，boot.img包含两部分，分别为kernel 和ramdisk。</p>
+<p>当你的Android手机启动时首先会启动RADIO，然后是SPL。<br>此时SPL 会根据你的按键，确定进入哪个模式（ 例如Recovery，Fastboot等等），<br>如果没有按其他键，那么spl 会将kernel 载入到记忆体中，ramdisk 也会载入到你的设备的根目录。</p>
+<p>cmnlib.mbn</p>
+<p>百度百科：</p>
+<p>mbn是高通包含了特定运营商定制的一套efs，nv的集成包文件。同样的mbn文件会有很多。每个运营商都会有一个特定mbn包含在modem的代码中。需要使用高通最新的PDC工具load和激活（PDC工具之前为QPST software download的子功能，现在作为一个单独的app包含在QPST中）。然后才能切换。<br>mbn文件是刷高通ril芯片的文件，需要用高通的QPST软件烧录。<br>mbn直接是个文件，不需要解压，把QPST切换到software download—Multi-image，这个sheet就可以识别mbn文件烧录。</p>
+<p>flashall.sh/flashall.bat</p>
+<p>刷机的脚本</p>
+<p>modem.img</p>
+<p>基带相关，射频相关的参数</p>
+<p>nvdef.img</p>
+<p>system.img</p>
+<p>真正的系统</p>
+<p>vendor.img</p>
+<p>vendor分区相关，带有品牌标识和驱动</p>
+<p>xbl.img</p>
+<p>xbl分区相关</p>
 
       
     </div>
@@ -239,10 +266,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2020-05-05 22:38:41 / Modified: 17:42:09" itemprop="dateCreated datePublished" datetime="2020-05-05T22:38:41+08:00">2020-05-05</time>
+              <time title="Created: 2020-05-05 22:38:41" itemprop="dateCreated datePublished" datetime="2020-05-05T22:38:41+08:00">2020-05-05</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-05-07 09:45:29" itemprop="dateModified" datetime="2020-05-07T09:45:29+08:00">2020-05-07</time>
+              </span>
 
           
 
@@ -258,6 +291,13 @@
           <p>安装cpu的pytorch，使用官网的安装方式，import的时候一直报”no module named torch”</p>
 <p>推荐使用下面的方式安装并创建deeplearning环境(名称可以自己定义)</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">conda create -n deeplearning pytorch torchvision -c pytorch</span><br><span class="line">conda activate deeplearning</span><br><span class="line">conda deactivate</span><br></pre></td></tr></table></figure>
+<p>如果安装的时候没有指定环境的话，可以通过conda info –envs命令查看默认创建的，比如：base</p>
+<a style="color:red;">
+注意：要在conda activate的深度学习环境的终端里面启动jupyter book，不然在引入的时候可能会出现no module named torch
+</a>
+
+<h3 id="jupter-notebook"><a href="#jupter-notebook" class="headerlink" title="jupter notebook"></a>jupter notebook</h3><p>安装：官网：<a href="https://jupyter.org/install.html" target="_blank" rel="noopener">https://jupyter.org/install.html</a></p>
+<p>启动：<a href="https://blog.csdn.net/cruise_h/article/details/60337437" target="_blank" rel="noopener">https://blog.csdn.net/cruise_h/article/details/60337437</a></p>
 
       
     </div>
@@ -476,7 +516,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-04-17 17:03:11" itemprop="dateModified" datetime="2020-04-17T17:03:11+08:00">2020-04-17</time>
+                <time title="Modified: 2020-05-07 11:58:05" itemprop="dateModified" datetime="2020-05-07T11:58:05+08:00">2020-05-07</time>
               </span>
 
           
@@ -505,6 +545,7 @@
 <p>如果没有指定的话，OUT_DIR是当前aosp的目录下的out文件夹</p>
 <p>手动指定，它的本质上是读你当前的环境变量的配置，如果你配置了则使用你的，没有配置的话就上面所说的路径<br>export OUT_DIR=your_out_dir<br>注意：export OUT_DIR=<br>OUT_DIR 后面直接跟= ，不要有空格。否则报错。</p>
 <p>soong构建相关的资料<br><a href="https://source.android.com/setup/build" target="_blank" rel="noopener">https://source.android.com/setup/build</a></p>
+<h3 id="LineageOS"><a href="#LineageOS" class="headerlink" title="LineageOS"></a>LineageOS</h3><p><a href="https://blog.csdn.net/zhonglunshun/article/details/89852565" target="_blank" rel="noopener">https://blog.csdn.net/zhonglunshun/article/details/89852565</a></p>
 
       
     </div>
