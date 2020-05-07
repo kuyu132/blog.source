@@ -69,3 +69,7 @@ OUT_DIR 后面直接跟= ，不要有空格。否则报错。
 
 soong构建相关的资料
 https://source.android.com/setup/build
+
+
+### LineageOS
+https://blog.csdn.net/zhonglunshun/article/details/89852565
