@@ -12,7 +12,7 @@ hexo.extend.helper.register('next_config', function() {
   config.algolia = config.algolia || {};
   let exportConfig = {
     hostname  : url.parse(config.url).hostname || config.url,
-    root      : config.ph,
+    root      : config.root,
     scheme    : theme.scheme,
     version   : next_version,
     exturl    : theme.exturl,

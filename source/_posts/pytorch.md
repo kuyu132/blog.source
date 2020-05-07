@@ -2,6 +2,7 @@
 title: pytorch
 date: 2020-05-05 22:38:41
 tags:
+hidden: true
 ---
 安装cpu的pytorch，使用官网的安装方式，import的时候一直报"no module named torch"
 
